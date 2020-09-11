@@ -1,0 +1,76 @@
+
+
+<div class="jumbotron vertical-center">
+
+  
+
+    <div class="container">
+        <div class="row">
+          <div class="col border border-primary ">
+            <div class="card-body px-lg-5 pt-0 container">
+
+                <h5 class="card-header info-color white-text text-center py-4">
+                    <strong>Bar charts</strong>
+                </h5>
+        
+                <div id="divChart">
+                    <canvas id="myChart">
+                       
+                    </canvas>
+                </div>
+          
+            </div>
+            </div>
+          <div class="col border border-warning">
+            <div class="card-body px-lg-5 pt-0 container">
+
+                <h5 class="card-header info-color white-text text-center py-4">
+                    <strong>Horizontal Bar charts</strong>
+                </h5>
+        
+                <div id="divChart">
+                    <canvas id="horizontalBar"></canvas>
+                </div>
+                
+          
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <div class="col border border-success ">
+
+                <h5 class="card-header info-color white-text text-center py-4">
+                    <strong>Line charts</strong>
+                </h5>
+        
+                <div id="divChart">
+                    <canvas id="lineChart"></canvas>
+                </div>
+              
+
+
+          </div>
+          <div class="col border border-info">
+
+            <h5 class="card-header info-color white-text text-center py-4">
+                <strong>Pie charts</strong>
+            </h5>
+
+            <div id="divChart">
+                <canvas height="150" mdbChart
+                    [chartType]="chartType"
+                    [datasets]="chartDatasets"
+                    [labels]="chartLabels"
+                    [colors]="chartColors"
+                    [options]="chartOptions"
+                    [legend]="true"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+              </div>
+
+          </div>
+        </div>
+      </div>
+</div>
+
+

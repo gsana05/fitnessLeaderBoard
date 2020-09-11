@@ -19,11 +19,15 @@ import {environment} from "../environments/environment";
 import { SignUpComponent } from './sign-up/sign-up.component'
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChartsModule } from 'ng2-charts';
+import { Observable } from 'rxjs';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignUpComponent
+    SignUpComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     AngularFireAuthGuardModule,
     FormsModule,
     ReactiveFormsModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    ChartsModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
