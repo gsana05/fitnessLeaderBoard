@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 import {environment} from "../environments/environment";
 import { SignUpComponent } from './sign-up/sign-up.component'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,11 @@ import { SignUpComponent } from './sign-up/sign-up.component'
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireAuthGuardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MDBBootstrapModule
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
